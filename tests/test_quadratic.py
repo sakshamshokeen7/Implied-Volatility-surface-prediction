@@ -101,7 +101,7 @@ def validate_row_by_row(kind='linear', fill_value='extrapolate'):
                             pass
                             
         # Forward/Backward fill any remaining
-        filled = filled.ffill().bfill()
+        filled = filled.ffill()
         
         y_true, y_pred = [], []
         for ix, c, tv in truth:

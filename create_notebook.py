@@ -95,7 +95,7 @@ for ix, row in df.iterrows():
 # Final fallback for completely empty rows (if any)
 for c in option_cols:
     if filled[c].isna().any():
-        filled[c] = filled[c].fillna(method='ffill').fillna(method='bfill')
+        filled[c] = filled[c].fillna(method='ffill')
 
 # Save fully filled dataset
 df_filled = df_original.copy()

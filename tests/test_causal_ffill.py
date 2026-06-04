@@ -74,7 +74,7 @@ def validate_ffill():
                         pred = float(f_pe(strikes_pe[j]))
                         filled.at[ix, c] = np.clip(pred, 0.01, 6.0)
                             
-        filled = filled.ffill().bfill()
+        filled = filled.ffill()
         
         y_true, y_pred = [], []
         for ix, c, tv in truth:

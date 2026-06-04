@@ -27,7 +27,7 @@ def eval_ffill(masked, truth):
     filled = masked.copy()
     # Forward fill then backward fill for the edges
     for c in option_cols:
-        filled[c] = filled[c].ffill().bfill()
+        filled[c] = filled[c].ffill()
         
     y_t, y_p = [], []
     for ix, c, tv in truth:

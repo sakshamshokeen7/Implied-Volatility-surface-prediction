@@ -30,7 +30,7 @@ def pandas_interp(masked, method='spline', order=2):
     
     # Fill remaining NaNs across time just in case
     filled[option_cols] = filled[option_cols].interpolate(method='linear', axis=0, limit_direction='both')
-    filled[option_cols] = filled[option_cols].bfill().ffill()
+    filled[option_cols] = filled[option_cols].ffill()
     
     return filled[option_cols].clip(lower=0.001)
 

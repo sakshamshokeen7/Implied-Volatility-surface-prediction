@@ -66,7 +66,7 @@ for ix, row in df.iterrows():
 
 for c in option_cols:
     if filled[c].isna().any():
-        filled[c] = filled[c].fillna(method='ffill').fillna(method='bfill')
+        filled[c] = filled[c].fillna(method='ffill')
 
 print("Preparing submission format...")
 sub_cols = ['id', 'implied_volatility']

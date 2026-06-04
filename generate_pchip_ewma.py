@@ -149,7 +149,7 @@ for ix in range(len(df)):
 # Global fallback just in case
 for c in option_cols:
     if filled_df[c].isna().any():
-        filled_df[c] = filled_df[c].fillna(method='ffill').fillna(method='bfill')
+        filled_df[c] = filled_df[c].fillna(method='ffill')
 
 print("Preparing submission format...")
 sub_cols = ['id', 'implied_volatility']

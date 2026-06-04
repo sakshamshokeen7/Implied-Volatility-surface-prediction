@@ -89,7 +89,7 @@ def validate_model(time_interp=False, cross_method='linear', fallback='extrapola
                             pass
                             
         # Forward/Backward fill any remaining
-        filled = filled.ffill().bfill()
+        filled = filled.ffill()
         
         y_true, y_pred = [], []
         for ix, c, tv in truth:

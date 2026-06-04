@@ -132,7 +132,7 @@ for ix in range(len(df)):
 # Global fallback just in case
 for c in option_cols:
     if filled_causal[c].isna().any():
-        filled_causal[c] = filled_causal[c].fillna(method='ffill').fillna(method='bfill')
+        filled_causal[c] = filled_causal[c].fillna(method='ffill')
 
 sub_cols = ['id', 'implied_volatility']
 sub_data = []
