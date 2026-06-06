@@ -14,6 +14,7 @@ __pycache__/
 
 # Data Files
 *.csv
+!submission_log_moneyness_extrapolate.csv
 
 # Images/Plots
 *.png
@@ -21,3 +22,9 @@ __pycache__/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Experimental Scripts & Tests
+generate_*.py
+make_*.py
+create_notebook.py
+catboost_info/
